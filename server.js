@@ -7,7 +7,7 @@ var app = express();
 const PORT  = process.env.PORT || 3000;
 
 //openweathermap
-app.use(function (req,res,nextt){
+app.use(function (req,res,next){
   if (req.headers['x-forwarded-proto']==='http'){
     next();
 
