@@ -25109,6 +25109,13 @@
 	      window.location.hash = '#/';
 	    }
 	  },
+	  componentWillReceiveProps: function componentWillReceiveProps(newProps) {
+	    var location = newProps.location.query.location;
+	    if (location && location.length > 0) {
+	      this.handleSearch(location);
+	      window.location.hash = '#/';
+	    }
+	  },
 	  render: function render() {
 	    var _state = this.state,
 	        isLoading = _state.isLoading,
